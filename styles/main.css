@@ -54,6 +54,59 @@ header h3{
 	font-style: italic;
 }
 
+#nav_menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav_menu li {
+	float: left;
+}
+
+#nav_menu li a {
+	display: block;
+	width: 160px;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+
+#nav_menu a.current {
+	color: yellow;
+}
+
+#nav_menu {
+	list-style: none;
+	position: relative;
+}
+
+#nav_menu ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	text-decoration: none;
+}
+
+#nav_menu ul li {
+	float: none;
+	list-style-type: none;
+}
+
+#nav_menu li:hover > ul {
+	display: block;
+}
+
+#nav_menu::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
 /* the styles for the section */
 main {
 	clear: left;
@@ -65,6 +118,10 @@ section {
 	padding-right: 20px;
 	padding-left: 20px;
 	padding-bottom: 20px;
+}
+
+section li {
+	list-style-type: circle;
 }
 
 aside {
